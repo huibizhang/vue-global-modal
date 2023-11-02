@@ -1,6 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { resolve } from "path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const _dirname =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : dirname(fileURLToPath(import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,7 +14,7 @@ export default defineConfig({
   build: {
     lib: {
       // src/indext.ts is where we have exported the component(s)
-      entry: resolve(__dirname, "package/index.js"),
+      entry: resolve(_dirname, "package/index.js"),
       name: "VueGlobalModal",
       // the name of the output files when the build is run
       fileName: "vue-global-modal",
