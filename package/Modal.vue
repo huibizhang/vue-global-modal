@@ -67,7 +67,7 @@ const close = () => {
 };
 
 $on(props.name, (args) => {
-  _default.value = { ..._default, ...args };
+  _default.value = { ..._default.value, ...args };
   props.showLogs && (_default.value.showLogs = props.showLogs);
 
   show();

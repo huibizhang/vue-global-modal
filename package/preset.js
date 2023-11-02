@@ -1,4 +1,4 @@
-const preset = {
+export default {
   /**
    * isOpen
    */
@@ -14,17 +14,15 @@ const preset = {
   /**
    * execute when `onConfirm` called.
    */
-  onConfirm() {},
+  onConfirm: () => {},
 
   /**
    * execute when `onConfirm` called.
    */
-  onCancel() {},
+  onCancel: () => {},
 
   /**
    * execute when `onConfirm` called.
    */
-  onClose() {},
+  onClose: () => {},
 };
-
-export default preset;
