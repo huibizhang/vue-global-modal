@@ -1,12 +1,10 @@
 {
   "name": "vue-global-modal",
-  "version": "1.0.0-beta",
-  "type": "module",
+  "version": "1.0.2-beta",
   "files": [
     "dist"
   ],
   "main": "./dist/vue-global-modal.umd.cjs",
-  "module": "./dist/vue-global-modal.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

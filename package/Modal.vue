@@ -18,11 +18,12 @@
 import { defineProps, ref } from "vue";
 import _props_ from "./props";
 import preset from "./preset";
+import { createPreset } from "./index";
 import { $on } from "vue-happy-bus";
 
 const props = defineProps(_props_);
 
-const _default = ref(preset);
+const _default = ref(createPreset(preset));
 
 const log = (msg = "trigged.") => {
   const msgHead = "[VGM]";
